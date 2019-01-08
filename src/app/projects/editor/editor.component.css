@@ -1,0 +1,13 @@
+.input-full-width{
+    width: 100%;
+    margin-bottom: 15px;
+}
+.input-title{
+    margin-left: -7px;
+    color: #3F51B5
+}
+
+#input-submit {
+    margin: 16px;
+    
+}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EditorConfig } from './model/EditorConfig';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-editor',
@@ -8,7 +9,8 @@ import { EditorConfig } from './model/EditorConfig';
 })
 export class EditorComponent implements OnInit {
 
-
+  paymentsForm = new FormControl();
+  tagList: string[] = ['支付宝', '微信', '银行卡', '现金', '微信', '银行卡', '现金'];
 
   constructor() { }
 

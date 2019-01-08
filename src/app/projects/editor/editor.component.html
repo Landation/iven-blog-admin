@@ -1,8 +1,44 @@
 <div class="container">
-    <mat-card>
-    <div id="md" appEditorMd [editormdConfig]="conf" (onEditorChange)="syncModel($event)">
-      <textarea style="display: block;" [(ngModel)]="markdown"></textarea>
-    </div>
+  <mat-card>
+
+    <mat-card-header>
+      <mat-card-title class="input-title">
+        <h3>新增文章</h3>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+
+      <mat-form-field class="input-full-width">
+        <input matInput placeholder="请输入一个响亮的标题吧">
+      </mat-form-field>
+
+      <mat-form-field class="input-full-width">
+        <textarea matInput placeholder="给你的文章做个描述"></textarea>
+      </mat-form-field>
+
+      <mat-form-field class="input-full-width">
+        <input matInput placeholder="请输入关键字用逗号分开（,）">
+      </mat-form-field>
+
+
+      <mat-form-field class="input-full-width">
+        <mat-select placeholder="支付状态" [formControl]="paymentsForm" multiple>
+          <mat-option *ngFor="let tag of tagList" [value]="tag">{{tag}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+      <div id="md" appEditorMd [editormdConfig]="conf" (onEditorChange)="syncModel($event)">
+        <textarea style="display: block;" [(ngModel)]="markdown"></textarea>
+      </div>
+
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button id="input-submit" mat-raised-button color="primary">提交</button>
+      <button id="input-save" mat-raised-button >存入草稿</button>
+    </mat-card-actions>
+
+
   </mat-card>
 </div>
-

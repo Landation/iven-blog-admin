@@ -6,14 +6,12 @@
           <tr>
             <td>
               <mat-form-field>
-                <mat-select placeholder="支付渠道" [formControl]="paymentsForm" multiple>
-                  <mat-option *ngFor="let topping of channelList" [value]="topping">{{topping}}</mat-option>
-                </mat-select>
+                  <input matInput placeholder="标题">
               </mat-form-field>
             </td>
             <td>
               <mat-form-field>
-                <mat-select placeholder="支付状态" [formControl]="paymentsForm" multiple>
+                <mat-select placeholder="标签" [formControl]="paymentsForm" multiple>
                   <mat-option *ngFor="let topping of statusList" [value]="topping">{{topping}}</mat-option>
                 </mat-select>
               </mat-form-field>
@@ -22,12 +20,12 @@
           <tr>
             <td>
               <mat-form-field>
-                <input matInput placeholder="业务订单号">
+                <input matInput placeholder="关键字">
               </mat-form-field>
             </td>
             <td>
               <mat-form-field>
-                <input matInput [matDatepicker]="picker" placeholder="支付时间">
+                <input matInput [matDatepicker]="picker" placeholder="日期">
                 <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker #picker></mat-datepicker>
               </mat-form-field>
@@ -37,7 +35,6 @@
       </mat-card-content>
       <mat-card-actions>
         <button mat-raised-button color="primary" (click)="haveRead()">查询</button>
-        <button mat-raised-button color="primary" (click)="haveRead()">导出</button>
       </mat-card-actions>
     </mat-card>
   </div>
@@ -95,6 +92,7 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
-    <mat-paginator [length]='length' [pageSize]='pageSize' (page)="pageData($event)" [pageSizeOptions]="pageSizeOptions" showFirstLastButtons></mat-paginator>
+    <mat-paginator [length]='length' [pageSize]='pageSize' (page)="pageData($event)" [pageSizeOptions]="pageSizeOptions"
+      showFirstLastButtons></mat-paginator>
   </mat-card>
 </div>
