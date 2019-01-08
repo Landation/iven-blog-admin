@@ -1,0 +1,22 @@
+
+<div class="vote-items">
+  <mat-card class="example-card" *ngFor="let book of bookitems">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{book.name}}</mat-card-title>
+      <mat-card-subtitle>{{book.author}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{book.cover}}" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        {{book.summary}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="vote(book.id)">投票</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+
+

@@ -1,0 +1,24 @@
+env:
+  - DOCKER_USERNAME=fengzhanyuan
+sudo: required
+language: node_js
+services:
+  - docker
+node_js:
+  - "8"
+cache:
+  directories:
+    - "node_modules"
+before_install:
+  - docker info
+  - docker ps -a
+install:
+  - npm install
+script:
+  - ng build ---prod
+  - ls ./dist/admin-ui
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker version
+  - docker build -t lyrewing/skyline-ui:1.2 .
+  - docker push lyrewing/skyline-ui:1.2
+  
