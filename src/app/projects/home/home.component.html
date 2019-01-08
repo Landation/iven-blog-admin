@@ -7,25 +7,49 @@
       <h3 matSubheader>小说后台数据</h3>
       <mat-list-item [ngClass]="{'focus':navlistOptions[3] }" (focus)="focus(3)" routerLink="./editor">
         <mat-icon class="menu-icon">create</mat-icon>
-        <span class="full-width">编辑器</span>
+        <span class="full-width">添加文章</span>
+      </mat-list-item>
+      <mat-list-item [ngClass]="{'focus':navlistOptions[1] }" (focus)="focus(1)" routerLink="./guide">
+        <mat-icon class="menu-icon">history</mat-icon>
+        <span class="full-width">文章列表</span>
       </mat-list-item>
 
+      <mat-list-item [ngClass]="{'focus':navlistOptions[3] }" (focus)="focus(3)" routerLink="./editor">
+        <mat-icon class="menu-icon">create</mat-icon>
+        <span class="full-width">草稿箱</span>
+      </mat-list-item>
+      <mat-list-item [ngClass]="{'focus':navlistOptions[1] }" (focus)="focus(1)" routerLink="./guide">
+        <mat-icon class="menu-icon">history</mat-icon>
+        <span class="full-width">留言墙</span>
+      </mat-list-item>
+
+
+
+      <mat-divider></mat-divider>
+      <h3 matSubheader>宝马后台数据</h3>
       <mat-list-item [ngClass]="{'focus':navlistOptions[0] }" (focus)="focus(0)" routerLink="./vote">
         <mat-icon class="menu-icon">how_to_vote</mat-icon>
-        <span class="full-width">小说投票</span>
+        <span class="full-width">标签管理</span>
         <mat-icon>expand_more</mat-icon>
       </mat-list-item>
       <mat-list-item [ngClass]="{'focus':navlistOptions[2] }" (focus)="focus(2)" routerLink="./chart">
         <mat-icon class="menu-icon">assessment</mat-icon>
-        <span class="full-width">投票数据排行</span>
+        <span class="full-width">文章评论</span>
       </mat-list-item>
-      <mat-divider></mat-divider>
-      <h3 matSubheader>宝马后台数据</h3>
-      <mat-list-item [ngClass]="{'focus':navlistOptions[1] }" (focus)="focus(1)" routerLink="./guide">
-        <mat-icon class="menu-icon">history</mat-icon>
-        <span class="full-width">支付交易历史</span>
+
+
+
+      <mat-list-item [ngClass]="{'focus':navlistOptions[0] }" (focus)="focus(0)" routerLink="./vote">
+        <mat-icon class="menu-icon">how_to_vote</mat-icon>
+        <span class="full-width">全部项目</span>
+        <mat-icon>expand_more</mat-icon>
+      </mat-list-item>
+      <mat-list-item [ngClass]="{'focus':navlistOptions[2] }" (focus)="focus(2)" routerLink="./chart">
+        <mat-icon class="menu-icon">assessment</mat-icon>
+        <span class="full-width">新增项目</span>
       </mat-list-item>
     </mat-nav-list>
+
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary" class="nav-header">
@@ -34,7 +58,7 @@
         <span class="menu-spacer"></span>
         <a [matMenuTriggerFor]="menu" mat-button class="menu-user-logout">870831935@qq.com</a>
         <mat-menu #menu="matMenu">
-          <button mat-menu-item >
+          <button mat-menu-item>
             <mat-icon>dialpad</mat-icon>
             <span>用户中心</span>
           </button>
