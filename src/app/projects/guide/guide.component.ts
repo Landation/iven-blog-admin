@@ -38,7 +38,7 @@ export class GuideComponent implements OnInit {
 
 
   //路由守卫
-  isReadAll: boolean = false;
+  isReadAll: boolean = true;
   haveRead() {
     this.isReadAll = true;
     console.log(this.isReadAll)

@@ -51,15 +51,6 @@
       </mat-toolbar-row>
     </mat-toolbar>
     <div class="nav-content">
-      <div class="aux-content">
-        <div class="mat-elevation-z8">
-              <img class="qrcode" src="/assets/qrcode.svg">
-        </div>
-
-        <a [routerLink]="[{outlets:{aux: 'consult'}}]"></a>
-        <a [routerLink]="[{outlets:{aux: null}}]"></a>
-        <router-outlet name="aux"></router-outlet>
-      </div>
       <router-outlet></router-outlet>
     </div>
 
