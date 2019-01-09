@@ -20,6 +20,8 @@ import {
   MatSelectModule,
   MatDatepickerModule,
   MatNativeDateModule,
+  MatChipsModule
+  
 
 } from '@angular/material';
 import {ViserModule} from 'viser-ng';
@@ -45,7 +47,8 @@ import {ViserModule} from 'viser-ng';
     MatPaginatorModule,
     MatSelectModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatChipsModule
 
   ],
   exports: [
@@ -69,7 +72,8 @@ import {ViserModule} from 'viser-ng';
     MatPaginatorModule,
     MatSelectModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatChipsModule
   ]
 })
 export class SharedModule { }

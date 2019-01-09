@@ -27,7 +27,7 @@ export class GuideComponent implements OnInit {
   statusList: string[] = ["成功", "失败"];
 
   //Payment Data
-  displayedColumns: string[] = ['OrderNO', 'Amount', 'PaymentNO', 'Channel', 'StartTime', 'PaymentAmount', 'Status'];
+  displayedColumns: string[] = ['OrderNO', 'Channel', 'StartTime','PaymentNO' ];
   paymentsSource: Payment[] = payments;
   pageSource: Payment[] = [];
   //Payment Page
