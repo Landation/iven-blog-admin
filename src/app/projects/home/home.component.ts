@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -10,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
   constructor(private authService: AuthService, private router: Router) {
+
   }
   //数组代表选中状态
   navlistOptions: boolean[] = [false, false, false, false]

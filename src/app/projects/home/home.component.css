@@ -13,7 +13,8 @@
     width: 100%
   }
   .menu-icon{
-    margin-right: 2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
   }
   .menu-user-account{
     position: fixed;
@@ -43,8 +44,4 @@
  .focus{
    background-color: rgba(0,0,0,.04)
  }
- .qrcode{
-    padding: 0.5rem;
-    height:2rem;
-    width:2rem;
- }
+
