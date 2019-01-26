@@ -8,3 +8,6 @@
     width:40%;
   }
 
+  .mat-header-container,.mat-cell{
+  text-align: center
+}
