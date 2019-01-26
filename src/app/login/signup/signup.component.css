@@ -1,7 +1,8 @@
 mat-card {
-  height: 25rem;
+  height: 35rem;
+  width: 50rem;
   margin: 5px,5px;
-  flex: 0 0 20rem;
+  flex: 0 0 auto;
 
 }
 
@@ -39,4 +40,12 @@ form {
 
 .form-radio {
   margin: 10px;
+}
+
+mat-icon.avatar{
+  overflow:hidden;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin: 12px;
 }

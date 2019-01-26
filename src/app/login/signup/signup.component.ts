@@ -13,12 +13,15 @@ import {Router} from '@angular/router';
 
 
 export class SignupComponent implements OnInit {
-
+  items:string[]
   constructor(private accountService: AccountService, public snackBar: MatSnackBar, private router: Router) {
 
   }
 
   ngOnInit() {
+    const nums = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]
+    this.items = nums.map(x=> `avatars:svg-${x}`)
+
   }
 
   register(u: any) {

@@ -7,19 +7,24 @@
     </mat-card-header>
     <mat-card-content>
       <mat-form-field class="form-input">
-        <input matInput placeholder="Email" ngModel name="email" value="">
+        <input matInput placeholder="你的邮箱" ngModel name="email" value="">
       </mat-form-field>
       <mat-form-field class="form-input">
-        <input matInput placeholder="Phone" ngModel name="phone" value="">
+        <input matInput placeholder="你的手机" ngModel name="phone" value="">
       </mat-form-field>
       <div ngModelGroup="passwordInfo">
         <mat-form-field class="form-input">
-          <input matInput type="password" placeholder="password" ngModel name="password" value="">
+          <input matInput type="password" placeholder="你的密码" ngModel name="password" value="">
         </mat-form-field>
         <mat-form-field class="form-input">
-          <input matInput type="password" placeholder="password confirm" ngModel name="repassword" value="">
+          <input matInput type="password" placeholder="重复输入你的密码" ngModel name="repassword" value="">
         </mat-form-field>
       </div>
+      <mat-grid-list cols="8">
+        <mat-grid-tile *ngFor="let item of items">
+          <mat-icon class="avatar" [svgIcon] = "item"></mat-icon>
+        </mat-grid-tile>
+      </mat-grid-list>
       <button mat-raised-button type="button" color="primary" (click)="register(registerForm.value)">注册</button>
     </mat-card-content>
 

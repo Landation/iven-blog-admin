@@ -1,8 +1,7 @@
 mat-card {
-    height: 20rem;
+    height: 22rem;
     margin: 5px,5px;
     flex:0 0 20rem;
-
    }
    form {
        display: flex;
