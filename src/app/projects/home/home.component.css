@@ -2,6 +2,7 @@
     width: 15rem;
   }
   .app-logo{
+    line-height: 1;
     height: 55px;
     width: 55px;
     margin: auto;

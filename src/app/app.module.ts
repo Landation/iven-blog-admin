@@ -19,7 +19,7 @@ import { PermissionGuard } from './guards/permission.guard';
     SharedModule,
     RoutingModule,
     BrowserAnimationsModule,
-    ProjectsModule,
+    
   ],
   bootstrap: [AppComponent]
 })

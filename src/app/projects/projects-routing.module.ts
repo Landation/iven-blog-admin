@@ -7,6 +7,7 @@ import { PermissionGuard } from '../guards/permission.guard';
 import { FocusGuard } from '../guards/focus.guard';
 import { GuidResolve } from '../guards/guid.resolve';
 import { EditorComponent } from './editor/editor.component';
+import { TaskHomeComponent } from '../task/task-home/task-home.component';
 
 
 const routers: Routes = [
@@ -22,6 +23,7 @@ const routers: Routes = [
                 */
             },
             {path: 'editor',component: EditorComponent},
+            {path: 'task',component: TaskHomeComponent},
         ]
     },
 ]

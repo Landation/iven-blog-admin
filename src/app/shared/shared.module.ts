@@ -21,6 +21,7 @@ import {
   MatDatepickerModule,
   MatNativeDateModule,
   MatChipsModule,
+  MatTooltipModule
 
   
   
@@ -50,7 +51,9 @@ import {ViserModule} from 'viser-ng';
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatChipsModule
+    MatChipsModule,
+    MatTooltipModule
+
 
   ],
   exports: [
@@ -75,7 +78,8 @@ import {ViserModule} from 'viser-ng';
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatChipsModule
+    MatChipsModule,
+    MatTooltipModule
   ]
 })
 export class SharedModule { }

@@ -10,6 +10,7 @@ import { EditorComponent } from './editor/editor.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditorMdDirective } from './editor/editor-md.directive';
 import { BrowserModule } from '@angular/platform-browser';
+import { TaskModule } from '../task/task.module';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { BrowserModule } from '@angular/platform-browser';
     ProjectsRoutingModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TaskModule
   ],
   declarations: [HomeComponent, GuideComponent,AddBookDialog, MultiplePipe, EditorComponent,EditorMdDirective],
   entryComponents:[
