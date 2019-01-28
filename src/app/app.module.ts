@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProjectsModule } from './projects/projects.module';
 import { SharedModule } from './shared/shared.module';
 import { PermissionGuard } from './guards/permission.guard';
+import { RouteReuseStrategy } from '@angular/router';
+import { ExtensionRouteReuseStrategy } from './ExtensionRouteReuseStrategy';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,9 @@ import { PermissionGuard } from './guards/permission.guard';
     RoutingModule,
     BrowserAnimationsModule,
     
+  ],
+  providers:[
+    {provide:RouteReuseStrategy,useClass:ExtensionRouteReuseStrategy}
   ],
   bootstrap: [AppComponent]
 })

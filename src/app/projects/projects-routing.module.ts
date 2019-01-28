@@ -13,17 +13,9 @@ import { TaskHomeComponent } from '../task/task-home/task-home.component';
 const routers: Routes = [
     {
         path: 'home', component: HomeComponent, canActivate: [PermissionGuard], children: [
-            {
-                path: 'guide', component: GuideComponent, canDeactivate: [FocusGuard],
-                /*
-                resolve:
-                {
-                    guide: GuidResolve,      
-                }
-                */
-            },
-            {path: 'editor',component: EditorComponent},
-            {path: 'task',component: TaskHomeComponent},
+            { path: 'guide', component: GuideComponent, canDeactivate: [FocusGuard], },
+            { path: 'editor', component: EditorComponent, data: { keep: true } },
+            { path: 'task', component: TaskHomeComponent },
         ]
     },
 ]

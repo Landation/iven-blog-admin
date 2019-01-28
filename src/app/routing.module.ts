@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router'
+import { RouterModule, Routes, RouteReuseStrategy } from '@angular/router'
 import { LoginModule } from './login/login.module';
 import { ProjectsModule } from './projects/projects.module';
+import { ExtensionRouteReuseStrategy } from './ExtensionRouteReuseStrategy';
 
 const routers: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
