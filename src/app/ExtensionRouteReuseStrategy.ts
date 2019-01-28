@@ -47,7 +47,7 @@ export class ExtensionRouteReuseStrategy implements RouteReuseStrategy {
     }
 
     //删除快照
-    private static deleteRouteSnapshot(name: string): void {
+    public static deleteRouteSnapshot(name: string): void {
         if (this.handlers.get(name)) {
             this.handlers.delete(name);
         } else {
